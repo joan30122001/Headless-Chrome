@@ -133,30 +133,30 @@ try:
         driver.quit()
         exit()
 
-    # Step 5: Navigate to "New Item" to create a project
-    driver.get("http://52.91.120.52:8080/view/All/newJob")  # Direct URL to create new project
-    time.sleep(2)
+    # # Step 5: Navigate to "New Item" to create a project
+    # driver.get("http://52.91.120.52:8080/view/All/newJob")  # Direct URL to create new project
+    # time.sleep(2)
 
-    # Step 6: Enter project name
-    project_name = "Jenkins_Project"  # Change the project name if needed
-    project_name_input = driver.find_element(By.ID, "name")
-    project_name_input.send_keys(project_name)
+    # # Step 6: Enter project name
+    # project_name = "Jenkins_Project"  # Change the project name if needed
+    # project_name_input = driver.find_element(By.ID, "name")
+    # project_name_input.send_keys(project_name)
 
-    # Step 7: Select "Freestyle Project"
-    freestyle_project_option = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/form/div[2]/div[2]/div[1]/ul/li[2]")
-    freestyle_project_option.click()
-    time.sleep(1)
+    # # Step 7: Select "Freestyle Project"
+    # freestyle_project_option = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/form/div[2]/div[2]/div[1]/ul/li[2]")
+    # freestyle_project_option.click()
+    # time.sleep(1)
 
-    # Step 8: Click "OK" button to create the project
-    ok_button = driver.find_element(By.ID, "ok-button")
-    ok_button.click()
-    time.sleep(3)
+    # # Step 8: Click "OK" button to create the project
+    # ok_button = driver.find_element(By.ID, "ok-button")
+    # ok_button.click()
+    # time.sleep(3)
 
-    # Step 9: Verify if project creation was successful
-    if project_name.lower() in driver.current_url.lower():
-        print(f"Project '{project_name}' created successfully!")
-    else:
-        print("Project creation failed!")
+    # # Step 9: Verify if project creation was successful
+    # if project_name.lower() in driver.current_url.lower():
+    #     print(f"Project '{project_name}' created successfully!")
+    # else:
+    #     print("Project creation failed!")
 
 except Exception as e:
     print(f"An error occurred: {e}")
